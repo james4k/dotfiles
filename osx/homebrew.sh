@@ -14,6 +14,6 @@ then
 fi
 
 # Install homebrew packages
-brew install coreutils vim tmux
+brew install coreutils vim
 
 exit 0

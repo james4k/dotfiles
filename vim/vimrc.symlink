@@ -18,16 +18,17 @@ command! Gb w | !go build -v
 command! Gt w | !go test -v
 autocmd BufWritePre *.go :Fmt
 
+filetype plugin indent on
+color twilight
+syntax on
+
 " Vundle plugins
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'wting/rust.vim'
-
-filetype plugin indent on
-color twilight
-syntax on
+Bundle 'saltstack/salt-vim'
 
 " vimrc shortcut
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
