@@ -122,7 +122,7 @@ source $HOME/.bash_profile
 # If we are on a mac, lets install and setup homebrew
 if [ "$(uname -s)" == "Darwin" ]
 then
-  info "installing dependencies"
+  info "installing OSX dependencies"
   if . bin/dot > /tmp/dotfiles-dot 2>&1
   then
     success "dependencies installed"
