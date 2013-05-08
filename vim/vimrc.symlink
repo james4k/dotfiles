@@ -1,0 +1,42 @@
+set nocompatible
+set number
+set hlsearch
+set hidden
+set wildmenu
+
+let mapleader = ","
+
+set guifont=Source\ Code\ Pro\ Light:h14
+
+filetype off
+
+" Go plugins
+set rtp+=$GOROOT/misc/vim
+
+" Go shortcuts
+command! Gb w | !go build -v
+command! Gt w | !go test -v
+autocmd BufWritePre *.go :Fmt
+
+" Vundle plugins
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'wting/rust.vim'
+
+filetype plugin indent on
+color twilight
+syntax on
+
+" vimrc shortcut
+:nnoremap <leader>ev :vsplit $MYVIMRC<cr>
+:nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" make shortcut
+:nnoremap <leader>mm :w<cr>:!make<cr>
+
+set tabstop=4
+set shiftwidth=4
+set backspace=2
+

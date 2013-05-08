@@ -1,0 +1,33 @@
+export DOTFILES="$HOME/.dotfiles"
+
+export EDITOR=vim
+export CLICOLOR=1
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+# Go env
+export GOROOT="$HOME/go"
+export GOPATH="$HOME/gocode"
+
+# CDPATH
+export CDPATH="$HOME/gocode/src/bitbucket.org/james4k/"
+export CDPATH="$HOME/gocode/src/github.com/james4k/:$CDPATH"
+
+# PATH
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
+export PATH=$DOTFILES/bin:$PATH
+export PATH=$GOROOT/bin:$PATH
+export PATH=$HOME/gocode/bin:$PATH
+export PATH=$HOME/node_modules/.bin:$PATH
+
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+source $HOME/.bash_prompt
+
+for file in `find $DOTFILES/bash -maxdepth 2 -name \*.sh`
+do
+  source $file
+done
+
