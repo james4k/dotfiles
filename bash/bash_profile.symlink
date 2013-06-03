@@ -19,6 +19,7 @@ export PATH=/usr/local/share/python:$PATH
 export PATH=$HOME/node_modules/.bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/gocode/bin:$PATH
+export PATH=/usr/local/appscale-tools/bin:$PATH
 
 if [[ -a ~/.localrc ]]
 then
