@@ -18,9 +18,9 @@ command! Gb w | !go build -v
 command! Gt w | !go test -v
 autocmd BufWritePre *.go :Fmt
 
-filetype plugin indent on
-color twilight
-syntax on
+set tabstop=4
+set shiftwidth=4
+set backspace=2
 
 " Vundle plugins
 set rtp+=~/.vim/bundle/vundle/
@@ -30,14 +30,15 @@ Bundle 'leafgarland/typescript-vim'
 Bundle 'wting/rust.vim'
 Bundle 'saltstack/salt-vim'
 
+filetype plugin indent on
+color twilight
+syntax on
+
+
 " vimrc shortcut
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " make shortcut
 :nnoremap <leader>mm :w<cr>:!make<cr>
-
-set tabstop=4
-set shiftwidth=4
-set backspace=2
 
