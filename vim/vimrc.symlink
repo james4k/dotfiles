@@ -29,6 +29,7 @@ Bundle 'gmarik/vundle'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'wting/rust.vim'
 Bundle 'saltstack/salt-vim'
+Bundle 'vim-scripts/nginx.vim'
 
 filetype plugin indent on
 color twilight
