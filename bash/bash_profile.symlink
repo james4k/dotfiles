@@ -8,10 +8,6 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 export GOROOT="$HOME/go"
 export GOPATH="$HOME/gocode:$HOME/apps"
 
-# CDPATH
-export CDPATH="$HOME/gocode/src/bitbucket.org/james4k/"
-export CDPATH="$HOME/gocode/src/github.com/james4k/:$CDPATH"
-
 # PATH
 export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 export PATH=$DOTFILES/bin:$PATH
