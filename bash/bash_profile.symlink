@@ -16,12 +16,21 @@ export PATH=$HOME/node_modules/.bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/gocode/bin:$PATH
 
+eval "$(fasd --init auto)"
+
 if [[ -a ~/.localrc ]]
 then
   source ~/.localrc
 fi
 
 source $HOME/.bash_prompt
+
+if [ -f ~/bin/bash_completion ]; then
+	BASH_COMPLETION=~/bin/bash_completion
+	BASH_COMPLETION_DIR=~/.bash_completion.d
+	export BASH_COMPLETION BASH_COMPLETION_DIR
+	. ~/bin/bash_completion
+fi
 
 for file in `find $DOTFILES/bash -maxdepth 2 -name \*.sh`
 do
