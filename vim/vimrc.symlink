@@ -14,13 +14,15 @@ filetype off
 set rtp+=$GOROOT/misc/vim
 
 " Go shortcuts
-command! Gb w | !go build -v
+command! Gb w | cexpr system('go build')
 command! Gt w | !go test -v
 autocmd BufWritePre *.go :Fmt
 
 set tabstop=4
 set shiftwidth=4
 set backspace=2
+set textwidth=72
+set formatoptions=cq
 
 " Vundle plugins
 set rtp+=~/.vim/bundle/vundle/
