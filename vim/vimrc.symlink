@@ -28,6 +28,7 @@ set formatoptions=cq
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
+Bundle 'flazz/vim-colorschemes'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'wting/rust.vim'
 Bundle 'saltstack/salt-vim'
