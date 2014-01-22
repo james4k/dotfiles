@@ -29,6 +29,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'scrooloose/nerdtree'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'wting/rust.vim'
 Bundle 'saltstack/salt-vim'
@@ -45,4 +46,5 @@ syntax on
 
 " make shortcut
 :nnoremap <leader>mm :w<cr>:!make<cr>
+:nnoremap <leader>l :NERDTreeToggle<cr>
 
