@@ -7,3 +7,6 @@ set -g prefix C-a
 # pass through a ctrl-a if you press it twice
 bind C-a send-prefix
 
+# immediate escape key - we dont use any esc combos for tmux
+set -sg escape-time 0
+
