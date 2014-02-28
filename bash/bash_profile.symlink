@@ -33,6 +33,9 @@ if [ -f ~/bin/bash_completion ]; then
 	. ~/bin/bash_completion
 fi
 
+stty werase undef
+bind '"\C-w": backward-kill-word'
+
 for file in `find $DOTFILES/bash -maxdepth 2 -name \*.sh`
 do
   source $file
