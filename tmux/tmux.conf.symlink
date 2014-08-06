@@ -1,11 +1,11 @@
 # unbind some default keybindings
 unbind C-b
 
-# set prefix key to ctrl-a
-set -g prefix C-a
+# set prefix key to ctrl-q
+set -g prefix C-q
 
-# pass through a ctrl-a if you press it twice
-bind C-a send-prefix
+# pass through a ctrl-q if you press it twice
+bind C-q send-prefix
 
 # immediate escape key - we dont use any esc combos for tmux
 set -sg escape-time 0
