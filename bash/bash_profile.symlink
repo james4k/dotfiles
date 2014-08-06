@@ -16,6 +16,7 @@ export PATH=$DOTFILES/bin:$PATH
 export PATH=$HOME/node_modules/.bin:$PATH
 export PATH=$GOROOT/bin:$PATH
 export PATH=$HOME/gocode/bin:$PATH
+export PATH=$HOME/go_appengine:$PATH
 
 #eval "$(fasd --init auto)"
 
