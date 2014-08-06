@@ -11,14 +11,6 @@ set guifont=Source\ Code\ Pro\ Light:h14
 
 filetype off
 
-" Go plugins
-set rtp+=$GOROOT/misc/vim
-
-" Go shortcuts
-command! Gb w | cexpr system('go build')
-command! Gt w | !go test -v
-autocmd BufWritePre *.go :Fmt
-
 set tabstop=4
 set shiftwidth=4
 set backspace=2
@@ -26,20 +18,18 @@ set textwidth=72
 set formatoptions=cq
 
 " Vundle plugins
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'scrooloose/nerdtree'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'wting/rust.vim'
-Bundle 'saltstack/salt-vim'
-Bundle 'vim-scripts/nginx.vim'
-
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/nginx.vim'
+Plugin 'fatih/vim-go'
+call vundle#end()
 filetype plugin indent on
+
 color twilight
 syntax on
-
 
 " vimrc shortcut
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -48,4 +38,19 @@ syntax on
 " make shortcut
 :nnoremap <leader>mm :w<cr>:!make<cr>
 :nnoremap <leader>l :NERDTreeToggle<cr>
+
+function! SetupYAML()
+	if &filetype == 'yaml'
+		setlocal tabstop=2 shiftwidth=2
+	endif
+endfunction
+autocmd BufReadPost,BufNewFile *.yml call SetupYAML()
+
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <leader>r <Plug>(go-run)
+au FileType go nmap <leader>b <Plug>(go-build)
+au FileType go nmap <leader>t <Plug>(go-test)
+au FileType go nmap gd <Plug>(go-def)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
 
