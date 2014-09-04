@@ -16,20 +16,22 @@ set shiftwidth=4
 set backspace=2
 set textwidth=72
 set formatoptions=cq
+set mouse=a
 
 " Vundle plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
+" Plugin 'flazz/vim-colorschemes'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-scripts/nginx.vim'
+" Plugin 'scrooloose/syntastic'
+" Plugin 'vim-scripts/nginx.vim'
 Plugin 'fatih/vim-go'
 call vundle#end()
 filetype plugin indent on
 
-color twilight
-syntax on
+" color twilight
+syntax off
 
 " vimrc shortcut
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
