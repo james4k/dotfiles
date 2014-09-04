@@ -47,5 +47,6 @@ export WHITE
 export BOLD
 export RESET
 
-export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\n$ \[$RESET\]"
+#export PS1="\[${BOLD}${MAGENTA}\]\u \[$WHITE\]at \[$ORANGE\]\h \[$WHITE\]in \[$GREEN\]\w\[$WHITE\]\n% \[$RESET\]"
+export PS1="% \[$RESET\]"
 export PS2="\[$ORANGE\]→ \[$RESET\]"
